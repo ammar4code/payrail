@@ -12,3 +12,18 @@ async def create_quote():
     "valuta_destinazione": "PKR",
     "giorni_consegna": 2
 }
+
+@app.post("/nordpost/rates")
+async def nordpost_rates():
+    return {
+        "status": "SUCCESS",
+        "offers": [
+            {
+                "feeCents": 420,
+                "feeCurrency": "EUR",
+                "payoutAmountCents": 32350000,
+                "payoutCurrency": "PKR",
+                "deliveryEstimateHours": 72
+            }
+        ]
+    }
