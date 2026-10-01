@@ -3,7 +3,7 @@ from fastapi import FastAPI
 app = FastAPI()
 
 @app.post("/veloce/quote")
-async def create_quote():
+async def veloce_quote():
     return {
     "esito": "ok",
     "commissione": "3.50",
