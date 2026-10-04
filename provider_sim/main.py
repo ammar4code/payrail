@@ -27,3 +27,25 @@ async def nordpost_rates():
             }
         ]
     }
+
+@app.post("/adriatica/pricing")
+async def adriatica_pricing():
+    return {
+    "esito": "ok",
+    "importo": "3250.00",
+    "divisa": "PKR",
+    "spese": [
+        {"tipo": "base", "importo": "2.00"},
+        {"tipo": "cambio", "importo": "1.75"}
+    ],
+    "divisa_spese": "EUR",
+    "consegna": {"da": "2026-10-06", "a": "2026-10-08"}
+}
+
+@app.post("/adriatica/pricing-error")
+async def adriatica_pricing_error():
+    return{
+    "esito": "errore",
+    "codice": "VALUTA_NON_SUPPORTATA",
+    "messaggio": "Currency pair not supported"
+}
