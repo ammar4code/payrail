@@ -25,3 +25,10 @@ on invalid.
 Broke: Overwrote the imported router by re-creating it in main.py.
 Confused schemas/quote.py with api/v1/quotes.py.
 Next: the provider simulator — three fake payment providers.
+## Day 7 — Sun 4 Oct
+Did: Adriatica endpoints (split fees, date range, 200-with-error-body).
+Installed Docker — blocked on BIOS virtualisation. Read SQLAlchemy 2.0
+ORM Quick Start. Started app/db/models.py — Base + QuoteRecord.
+Broke: duplicate function name silently overwrote NordPost. Missing
+return statement. Edited in chat instead of the file.
+Next: remaining columns, Postgres in Docker, Alembic.
